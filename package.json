@@ -2,19 +2,22 @@
   "name": "sanity-nextjs-js-boilerplate",
   "private": true,
   "workspaces": [
-    "studio"
+    "./*"
   ],
   "scripts": {
     "dev": "concurrently \"next dev\" \"cd studio && npm run start\"",
-    "build": "echo 'Building Sanity to public/studio' && cd studio && npm run build && cd .. && next build",
+    "build": "next build",
     "start": "next start",
+    "sanity-deploy": "cd studio && npm run deploy",
     "lint": "next lint"
   },
   "dependencies": {
     "@sanity/cli": "^2.22.3",
+    "config": "^3.3.6",
     "next": "12.0.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "studio": "^0.13.5"
   },
   "devDependencies": {
     "concurrently": "^6.4.0",

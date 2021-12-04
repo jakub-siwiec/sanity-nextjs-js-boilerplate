@@ -1,14 +1,13 @@
 module.exports = {
   reactStrictMode: true,
-  async rewrites() {
-    return {
-      afterFiles: [
-        {
-          source: '/admin/:path*',
-          destination: '/studio/index.html'
-        }      
-      ]
-    }
-}
+  async redirects() {
+    return [
+      {
+        source: '/admin/:path*',
+        destination: 'https://sanity-nextjs-js-boilerplate.sanity.studio',
+        permanent: true,
+      },
+    ]
+  }
 
 }
