@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "dev": "concurrently \"next dev\" \"cd studio && npm run start\"",
+    "dev-next": "next dev",
     "build": "next build",
     "start": "next start",
     "sanity-deploy": "cd studio && npm run deploy",

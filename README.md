@@ -1,3 +1,47 @@
+# Table of Contents
+
+1. [Next.js and Sanity](#nextjsandsanity)
+2. [Next.js](#nextjs)
+
+# Next.js and Sanity
+
+In order to install monorepo from Next.js and Sanity dependencies for development mode run the command:
+
+```
+npm install --workspaces=studio && npm install --only=dev
+```
+
+Remember to create `.env.development` file in `./studio/` with environmental variables for your project:
+
+```
+SANITY_STUDIO_API_PROJECT_ID=
+SANITY_STUDIO_API_DATASET=
+```
+
+Now you can run Next.js app and Sanity studio locally with the command:
+
+```
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see Next.js app and [http://localhost:3333](http://localhost:3333) to enter local Sanity Studio in development environment.
+
+You can also enter [http://localhost:3000/admin](http://localhost:3000/admin) to see Sanity Studio hosted on Sanity.io servers. However, in order to do that you need to deploy Sanity Studio first. In order to commit changes in Sanity.io you also must deploy it. Do it using this command from the main directory:
+
+```
+npm run sanity-deploy
+```
+
+When you run install in the production server use this command:
+
+```
+npm install --production
+```
+
+Remember about setting `SANITY_STUDIO_API_PROJECT_ID` and `SANITY_STUDIO_API_DATASET` environmental variables.
+
+# Next.js <a name="nextjs"></a>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
