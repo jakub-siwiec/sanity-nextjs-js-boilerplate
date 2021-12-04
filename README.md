@@ -1,9 +1,15 @@
 # Table of Contents
 
-1. [Next.js and Sanity](#nextjsandsanity)
+1. [Next.js and Sanity.io](#nextjsandsanity)
 2. [Next.js](#nextjs)
 
-# Next.js and Sanity
+This boilerplates facilitates using monorepo with dependencies from both Next.js 12 and Sanity.io for development stage. Only NPM 7 Workspaces are used (no Lerna).
+
+In production stage only Next.js app is built while Sanity.io Studio is hosted on Sanity.io cloud.
+
+Sanity.io Studio is accessible through URL `https://<your_address>/admin`.
+
+# Next.js and Sanity.io
 
 In order to install monorepo from Next.js and Sanity dependencies for development mode run the command:
 
@@ -17,6 +23,8 @@ Remember to create `.env.development` file in `./studio/` with environmental var
 SANITY_STUDIO_API_PROJECT_ID=
 SANITY_STUDIO_API_DATASET=
 ```
+
+Remember about inserting your Sanity.io Studio URL in `next.config.js` as a value for `destination`.
 
 Now you can run Next.js app and Sanity studio locally with the command:
 
